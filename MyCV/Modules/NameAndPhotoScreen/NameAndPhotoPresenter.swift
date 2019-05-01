@@ -8,17 +8,31 @@
 
 import Foundation
 
-protocol NameAndPhotoView {
-
+protocol NameAndPhotoView: class {
+    func showImage(imageUrl: String)
+    func showFirstName(firstName: String)
+    func showSecondName(secondName: String)
 }
 
 class NameAndPhotoPresenter {
 
-    private var view: NameAndPhotoView?
+    private weak var view: NameAndPhotoView?
     private var coordinator: MainCoordinator?
 
     init(view: NameAndPhotoView, coordinator: MainCoordinator) {
         self.view = view
         self.coordinator = coordinator
+    }
+
+    func provideImageName() {
+        self.view?.showImage(imageUrl: AppConstants.AssetsConstants.myPhoto)
+    }
+
+    func provideFirstName() {
+        self.view?.showFirstName(firstName: AppConstants.NameAndPhotoScreenConstants.name)
+    }
+
+    func provideSecondName() {
+        self.view?.showSecondName(secondName: AppConstants.NameAndPhotoScreenConstants.surname)
     }
 }

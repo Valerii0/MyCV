@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+struct AppConstants {
+
+    struct AssetsConstants {
+        static let myPhoto = "myPhoto"
+    }
+
+    struct NameAndPhotoScreenConstants {
+        static let name = "Valerii"
+        static let surname = "Petrychenko"
+    }
+}
