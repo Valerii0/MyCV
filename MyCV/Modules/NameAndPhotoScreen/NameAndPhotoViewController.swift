@@ -27,8 +27,8 @@ class NameAndPhotoViewController: UIViewController, Storyboarded {
         configure()
     }
 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
 
         setUpImage(with: centerImage)
         setUpLabel(with: topLabel)

@@ -19,6 +19,7 @@ class MainCoordinator: Coordinatable {
 
     private enum StoryboardsName: String {
         case nameAndPhotoTab = "NameAndPhoto"
+        case interestsTab = "Interests"
     }
 
     init() {
@@ -31,16 +32,31 @@ class MainCoordinator: Coordinatable {
     func makeTabBarRoot() {
         window.rootViewController = tabBarController
         tabBarController.viewControllers = [
-            nameAndPhotoViewController()
+            nameAndPhotoViewController(),
+            interestsViewController()
         ]
     }
 
     func nameAndPhotoViewController() -> UIViewController {
         let viewController = NameAndPhotoViewController.instantiate(storyboardName: StoryboardsName.nameAndPhotoTab.rawValue)
-        viewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
+        viewController.tabBarItem = UITabBarItem(title: AppConstants.tabBarTitleConstants.i.rawValue,
+                                                 image: UIImage(named: AppConstants.AssetsConstants.tabBarCard.rawValue),
+                                                 tag: 0)
         let configurator = NameAndPhotoConfigurator()
         configurator.configure(viewController: viewController, coordinator: self)
         return viewController
+    }
+
+    func interestsViewController() -> UINavigationController {
+        let viewController = InterestsViewController.instantiate(storyboardName: StoryboardsName.interestsTab.rawValue)
+        viewController.tabBarItem = UITabBarItem(title: AppConstants.tabBarTitleConstants.interests.rawValue,
+                                                 image: UIImage(named: AppConstants.AssetsConstants.tabBarStar.rawValue),
+                                                 tag: 1)
+        let configurator = InterestsConfigurator()
+        configurator.configure(viewController: viewController, coordinator: self)
+        let navigationController = UINavigationController()
+        navigationController.viewControllers = [viewController]
+        return navigationController
     }
 
 }

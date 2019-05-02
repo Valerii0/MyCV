@@ -25,14 +25,14 @@ class NameAndPhotoPresenter {
     }
 
     func provideImageName() {
-        self.view?.showImage(imageUrl: AppConstants.AssetsConstants.myPhoto)
+        self.view?.showImage(imageUrl: AppConstants.AssetsConstants.myPhoto.rawValue)
     }
 
     func provideFirstName() {
-        self.view?.showFirstName(firstName: AppConstants.NameAndPhotoScreenConstants.name)
+        self.view?.showFirstName(firstName: AppConstants.NameAndPhotoScreenConstants.name.rawValue)
     }
 
     func provideSecondName() {
-        self.view?.showSecondName(secondName: AppConstants.NameAndPhotoScreenConstants.surname)
+        self.view?.showSecondName(secondName: AppConstants.NameAndPhotoScreenConstants.surname.rawValue)
     }
 }

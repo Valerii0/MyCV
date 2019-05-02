@@ -16,3 +16,16 @@ class NameAndPhotoConfigurator: NameAndPhotoConfigurable {
         viewController.presenter = nameAndPhotoPresenter
     }
 }
+
+protocol InterestsConfigurable {
+    func configure(viewController: InterestsViewController, coordinator: MainCoordinator)
+}
+
+class InterestsConfigurator: InterestsConfigurable {
+    func configure(viewController: InterestsViewController, coordinator: MainCoordinator) {
+        let interestsPresenter = InterestsPresenter(view: viewController, coordinator: coordinator)
+        viewController.presenter = interestsPresenter
+    }
+}
+
+
