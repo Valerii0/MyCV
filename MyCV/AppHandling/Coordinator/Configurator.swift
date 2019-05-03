@@ -17,6 +17,28 @@ class NameAndPhotoConfigurator: NameAndPhotoConfigurable {
     }
 }
 
+protocol SkillsConfigurable {
+    func configure(viewController: SkillsViewController, coordinator: MainCoordinator)
+}
+
+class SkillsConfigurator: SkillsConfigurable {
+    func configure(viewController: SkillsViewController, coordinator: MainCoordinator) {
+        let skillsPresenter = SkillsPresenter(view: viewController, coordinator: coordinator)
+        viewController.presenter = skillsPresenter
+    }
+}
+
+protocol EducationConfigurable {
+    func configure(viewController: EducationViewController, coordinator: MainCoordinator)
+}
+
+class EducationConfigurator: EducationConfigurable {
+    func configure(viewController: EducationViewController, coordinator: MainCoordinator) {
+        let educationPresenter = EducationPresenter(view: viewController, coordinator: coordinator)
+        viewController.presenter = educationPresenter
+    }
+}
+
 protocol InterestsConfigurable {
     func configure(viewController: InterestsViewController, coordinator: MainCoordinator)
 }
@@ -27,5 +49,3 @@ class InterestsConfigurator: InterestsConfigurable {
         viewController.presenter = interestsPresenter
     }
 }
-
-

@@ -36,7 +36,7 @@ class NameAndPhotoViewController: UIViewController, Storyboarded {
     }
 
     private func configure() {
-        presenter.provideImageName()
+        presenter.provideImageUrl()
         presenter.provideFirstName()
         presenter.provideSecondName()
     }

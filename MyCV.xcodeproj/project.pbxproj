@@ -19,6 +19,12 @@
 		3832D51322773AD50034D2A0 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3832D51222773AD50034D2A0 /* AppConstants.swift */; };
 		3832D51822773F0C0034D2A0 /* NameAndPhotoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3832D51722773F0C0034D2A0 /* NameAndPhotoPresenter.swift */; };
 		3832D51A22773F280034D2A0 /* NameAndPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3832D51922773F280034D2A0 /* NameAndPhotoViewController.swift */; };
+		383681A4227B738D00F722DB /* SkillsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383681A3227B738D00F722DB /* SkillsPresenter.swift */; };
+		383681A7227B78C600F722DB /* Education.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383681A6227B78C600F722DB /* Education.storyboard */; };
+		383681A9227B797D00F722DB /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383681A8227B797D00F722DB /* EducationViewController.swift */; };
+		383681AB227B7A0A00F722DB /* EducationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383681AA227B7A0A00F722DB /* EducationPresenter.swift */; };
+		383681AD227B9D8800F722DB /* extensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383681AC227B9D8800F722DB /* extensionUIView.swift */; };
+		3852B33B227CCB06006B3BBA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3852B33D227CCB06006B3BBA /* Localizable.strings */; };
 		38A84740227A0571005BA84E /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A8473F227A0571005BA84E /* SkillsViewController.swift */; };
 		38A84742227A05BE005BA84E /* Skills.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A84741227A05BE005BA84E /* Skills.storyboard */; };
 		38A84745227A3370005BA84E /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A84744227A3370005BA84E /* InterestsViewController.swift */; };
@@ -45,6 +51,14 @@
 		3832D51222773AD50034D2A0 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		3832D51722773F0C0034D2A0 /* NameAndPhotoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndPhotoPresenter.swift; sourceTree = "<group>"; };
 		3832D51922773F280034D2A0 /* NameAndPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndPhotoViewController.swift; sourceTree = "<group>"; };
+		383681A3227B738D00F722DB /* SkillsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsPresenter.swift; sourceTree = "<group>"; };
+		383681A6227B78C600F722DB /* Education.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Education.storyboard; sourceTree = "<group>"; };
+		383681A8227B797D00F722DB /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
+		383681AA227B7A0A00F722DB /* EducationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationPresenter.swift; sourceTree = "<group>"; };
+		383681AC227B9D8800F722DB /* extensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionUIView.swift; sourceTree = "<group>"; };
+		3852B33C227CCB06006B3BBA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3852B33E227CCB1C006B3BBA /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3852B33F227CCB29006B3BBA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		38A8473F227A0571005BA84E /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
 		38A84741227A05BE005BA84E /* Skills.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Skills.storyboard; sourceTree = "<group>"; };
 		38A84744227A3370005BA84E /* InterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +105,7 @@
 				38A8474A227A4884005BA84E /* Extensions */,
 				3832D51422773B2F0034D2A0 /* Resources */,
 				380037962274C6D800B9687E /* Info.plist */,
+				3852B33D227CCB06006B3BBA /* Localizable.strings */,
 			);
 			path = MyCV;
 			sourceTree = "<group>";
@@ -138,6 +153,7 @@
 			children = (
 				3832D51622773C330034D2A0 /* NameAndPhotoScreen */,
 				38A8473E227A0458005BA84E /* SkillsScreen */,
+				383681A5227B779800F722DB /* EducationScreen */,
 				38A84743227A3319005BA84E /* InterestsScreen */,
 			);
 			path = Modules;
@@ -153,10 +169,21 @@
 			path = NameAndPhotoScreen;
 			sourceTree = "<group>";
 		};
+		383681A5227B779800F722DB /* EducationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				383681A8227B797D00F722DB /* EducationViewController.swift */,
+				383681AA227B7A0A00F722DB /* EducationPresenter.swift */,
+				383681A6227B78C600F722DB /* Education.storyboard */,
+			);
+			path = EducationScreen;
+			sourceTree = "<group>";
+		};
 		38A8473E227A0458005BA84E /* SkillsScreen */ = {
 			isa = PBXGroup;
 			children = (
 				38A8473F227A0571005BA84E /* SkillsViewController.swift */,
+				383681A3227B738D00F722DB /* SkillsPresenter.swift */,
 				38A84741227A05BE005BA84E /* Skills.storyboard */,
 			);
 			path = SkillsScreen;
@@ -178,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				38A8474B227A48BA005BA84E /* extensionUITableView.swift */,
+				383681AC227B9D8800F722DB /* extensionUIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -234,6 +262,8 @@
 			knownRegions = (
 				en,
 				Base,
+				uk,
+				ru,
 			);
 			mainGroup = 3800377E2274C6C200B9687E;
 			productRefGroup = 380037882274C6C200B9687E /* Products */;
@@ -254,9 +284,11 @@
 				380037952274C6D800B9687E /* LaunchScreen.storyboard in Resources */,
 				38A84747227A338F005BA84E /* Interests.storyboard in Resources */,
 				380037922274C6D800B9687E /* Assets.xcassets in Resources */,
+				3852B33B227CCB06006B3BBA /* Localizable.strings in Resources */,
 				38A84742227A05BE005BA84E /* Skills.storyboard in Resources */,
 				380037902274C6C200B9687E /* NameAndPhoto.storyboard in Resources */,
 				381AE375227A5830009A6A8B /* InterestsTableViewCell.xib in Resources */,
+				383681A7227B78C600F722DB /* Education.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,13 +299,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				383681AD227B9D8800F722DB /* extensionUIView.swift in Sources */,
+				383681AB227B7A0A00F722DB /* EducationPresenter.swift in Sources */,
 				38A863A62276401300906237 /* Configurator.swift in Sources */,
 				3832D51A22773F280034D2A0 /* NameAndPhotoViewController.swift in Sources */,
 				38A84749227A3E8E005BA84E /* InterestsPresenter.swift in Sources */,
+				383681A9227B797D00F722DB /* EducationViewController.swift in Sources */,
 				3832D51322773AD50034D2A0 /* AppConstants.swift in Sources */,
 				38A8474C227A48BA005BA84E /* extensionUITableView.swift in Sources */,
 				38A863A82276403B00906237 /* Storyboarded.swift in Sources */,
 				38A84745227A3370005BA84E /* InterestsViewController.swift in Sources */,
+				383681A4227B738D00F722DB /* SkillsPresenter.swift in Sources */,
 				3832D51822773F0C0034D2A0 /* NameAndPhotoPresenter.swift in Sources */,
 				38A863A42276400500906237 /* MainCoordinator.swift in Sources */,
 				381AE374227A5830009A6A8B /* InterestsTableViewCell.swift in Sources */,
@@ -303,6 +339,16 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		3852B33D227CCB06006B3BBA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3852B33C227CCB06006B3BBA /* en */,
+				3852B33E227CCB1C006B3BBA /* uk */,
+				3852B33F227CCB29006B3BBA /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -310,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -371,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

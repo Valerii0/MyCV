@@ -24,7 +24,7 @@ class NameAndPhotoPresenter {
         self.coordinator = coordinator
     }
 
-    func provideImageName() {
+    func provideImageUrl() {
         self.view?.showImage(imageUrl: AppConstants.AssetsConstants.myPhoto.rawValue)
     }
 

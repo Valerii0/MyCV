@@ -13,8 +13,7 @@ class InterestsViewController: UIViewController, Storyboarded {
     @IBOutlet weak var interestsTableView: UITableView!
 
     var presenter: InterestsPresenter!
-
-    var navigationTitle: String!
+    
     var cellsData: [CellsModel]!
 
     override func viewDidLoad() {
@@ -83,9 +82,9 @@ extension InterestsViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return view.frame.height / 5
+            return AppConstants.InterestsScreenConstants.InterestsHeightCells.header.rawValue
         } else {
-            return view.frame.height / 3
+            return AppConstants.InterestsScreenConstants.InterestsHeightCells.section.rawValue
         }
     }
 }

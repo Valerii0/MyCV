@@ -19,6 +19,8 @@ class MainCoordinator: Coordinatable {
 
     private enum StoryboardsName: String {
         case nameAndPhotoTab = "NameAndPhoto"
+        case skillsTab = "Skills"
+        case educationTab = "Education"
         case interestsTab = "Interests"
     }
 
@@ -33,6 +35,8 @@ class MainCoordinator: Coordinatable {
         window.rootViewController = tabBarController
         tabBarController.viewControllers = [
             nameAndPhotoViewController(),
+            skillsViewController(),
+            educationViewController(),
             interestsViewController()
         ]
     }
@@ -47,17 +51,39 @@ class MainCoordinator: Coordinatable {
         return viewController
     }
 
-    func interestsViewController() -> UINavigationController {
-        let viewController = InterestsViewController.instantiate(storyboardName: StoryboardsName.interestsTab.rawValue)
-        viewController.tabBarItem = UITabBarItem(title: AppConstants.tabBarTitleConstants.interests.rawValue,
-                                                 image: UIImage(named: AppConstants.AssetsConstants.tabBarStar.rawValue),
+    func skillsViewController() -> UINavigationController {
+        let viewController = SkillsViewController.instantiate(storyboardName: StoryboardsName.skillsTab.rawValue)
+        viewController.tabBarItem = UITabBarItem(title: AppConstants.tabBarTitleConstants.skills.rawValue,
+                                                 image: UIImage(named: AppConstants.AssetsConstants.tabBarIntellectual.rawValue),
                                                  tag: 1)
-        let configurator = InterestsConfigurator()
+        let configurator = SkillsConfigurator()
         configurator.configure(viewController: viewController, coordinator: self)
         let navigationController = UINavigationController()
         navigationController.viewControllers = [viewController]
         return navigationController
     }
 
-}
+    func educationViewController() -> UINavigationController {
+        let viewController = EducationViewController.instantiate(storyboardName: StoryboardsName.educationTab.rawValue)
+        viewController.tabBarItem = UITabBarItem(title: AppConstants.tabBarTitleConstants.education.rawValue,
+                                                 image: UIImage(named: AppConstants.AssetsConstants.tabBarStudent.rawValue),
+                                                 tag: 2)
+        let configurator = EducationConfigurator()
+        configurator.configure(viewController: viewController, coordinator: self)
+        let navigationController = UINavigationController()
+        navigationController.viewControllers = [viewController]
+        return navigationController
+    }
 
+    func interestsViewController() -> UINavigationController {
+        let viewController = InterestsViewController.instantiate(storyboardName: StoryboardsName.interestsTab.rawValue)
+        viewController.tabBarItem = UITabBarItem(title: AppConstants.tabBarTitleConstants.interests.rawValue,
+                                                 image: UIImage(named: AppConstants.AssetsConstants.tabBarStar.rawValue),
+                                                 tag: 3)
+        let configurator = InterestsConfigurator()
+        configurator.configure(viewController: viewController, coordinator: self)
+        let navigationController = UINavigationController()
+        navigationController.viewControllers = [viewController]
+        return navigationController
+    }
+}
