@@ -24,19 +24,14 @@ class InterestsHeaderTableViewCell: UITableViewCell {
     }
 
     private func setUpUI() {
-       // self.layer.borderWidth = self.frame.height / 30
-       // self.layer.borderColor = UIColor.blue.cgColor
-//        self.layer.backgroundColor = UIColor.clear.cgColor
-//        self.inputView?.backgroundColor = .clear
-//        self.backgroundColor = .clear
-
         backgroundImage.image = UIImage(named: AppConstants.AssetsConstants.interestsCellStar.rawValue)
         backgroundImage.contentMode = .scaleAspectFill
 
-        rotateView(targetView: backgroundImage)
+        rotateView(targetView: backgroundImage,
+                   duration: AppConstants.InterestsScreenConstants.Animation.animationDurationForStarRotating.rawValue)
     }
 
-    private func rotateView(targetView: UIView, duration: Double = 3.0) {
+    private func rotateView(targetView: UIView, duration: Double) {
         UIView.animate(withDuration: duration, delay: 0.0, options: .curveLinear, animations: {
             targetView.transform = targetView.transform.rotated(by: .pi)
         }) { finished in
@@ -47,6 +42,6 @@ class InterestsHeaderTableViewCell: UITableViewCell {
     func configure(with text: String) {
         interestLabel.text = text
         interestLabel.textAlignment = .center
-        interestLabel.font = interestLabel.font.withSize(50)
+        interestLabel.font = interestLabel.font.withSize(AppConstants.InterestsScreenConstants.FontsSize.size.rawValue)
     }
 }

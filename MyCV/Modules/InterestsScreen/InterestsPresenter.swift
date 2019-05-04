@@ -24,19 +24,28 @@ class InterestsPresenter {
     }
 
     func provideTitle() {
-        self.view?.setNavigationTitle(title: AppConstants.InterestsScreenConstants.Common.title.rawValue)
+        self.view?.setNavigationTitle(title: AppConstants.TabBarTitleConstants.interests.localized)
     }
 
     func provideCellsData() {
-        let cellsDataArray: [CellsModel] = [CellsModel(opened: false,
-                                                      title: AppConstants.InterestsScreenConstants.Interests.gym.rawValue,
-                                                      sectionData: AppConstants.AssetsConstants.interestsGym.rawValue),
-                                           CellsModel(opened: false,
-                                                      title: AppConstants.InterestsScreenConstants.Interests.coding.rawValue,
-                                                      sectionData: AppConstants.AssetsConstants.interestsMac.rawValue),
-                                           CellsModel(opened: false,
-                                                      title: AppConstants.InterestsScreenConstants.Interests.football.rawValue,
-                                                      sectionData: AppConstants.AssetsConstants.interestsStadium.rawValue)]
+        let cellsDataArray: [CellsModel] = [
+
+            CellsModel(opened: false,
+                       title: AppConstants.InterestsScreenConstants.Interests.coding.localized,
+                       sectionData: AppConstants.AssetsConstants.interestsMac.rawValue),
+            CellsModel(opened: false,
+                       title: AppConstants.InterestsScreenConstants.Interests.ai.localized,
+                       sectionData: AppConstants.AssetsConstants.interestsAI.rawValue),
+            CellsModel(opened: false,
+                       title: AppConstants.InterestsScreenConstants.Interests.gym.localized,
+                       sectionData: AppConstants.AssetsConstants.interestsGym.rawValue),
+            CellsModel(opened: false,
+                       title: AppConstants.InterestsScreenConstants.Interests.football.localized,
+                       sectionData: AppConstants.AssetsConstants.interestsStadium.rawValue),
+            CellsModel(opened: false,
+                       title: AppConstants.InterestsScreenConstants.Interests.traveling.localized,
+                       sectionData: AppConstants.AssetsConstants.interestsTraveling.rawValue),
+        ]
 
         self.view?.setCellsArray(cellsDataArray: cellsDataArray)
     }

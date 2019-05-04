@@ -12,78 +12,124 @@ import UIKit
 enum AppConstants {
 
     enum AssetsConstants: String {
-        case myPhoto = "NameAndPhoto/myPhoto"
         case tabBarCard = "TabBar/card"
         case tabBarIntellectual = "TabBar/intellectual"
         case tabBarStudent = "TabBar/student"
         case tabBarStar = "TabBar/star"
+        case myPhoto = "NameAndPhoto/myPhoto"
+        case interestsCellStar = "Interests/cellStar"
+        case interestsMac = "Interests/mac"
+        case interestsAI = "Interests/ai"
         case interestsGym = "Interests/gym"
         case interestsStadium = "Interests/oldTrafford"
-        case interestsMac = "Interests/mac"
-        case interestsCellStar = "Interests/cellStar"
+        case interestsTraveling = "Interests/travel"
     }
 
-    enum tabBarTitleConstants: String {
-        case i = "I"
+    enum TabBarTitleConstants: String {
+        case iAm = "Photo"
         case skills = "Skills"
         case education = "Education"
         case interests = "Interests"
+
+        var localized: String {
+            return self.rawValue.localizedCapitalized
+        }
     }
 
-    enum NameAndPhotoScreenConstants: String {
-        case name = "Valerii"
-        case surname = "Petrychenko"
+    enum NameAndPhotoScreenConstants {
+        enum Content: String {
+            case name = "Valerii"
+            case surname = "Petrychenko"
+
+            var localized: String {
+                return self.rawValue.localizedCapitalized
+            }
+        }
+
+        enum Animation: Double {
+            case animationDuration = 3.0
+        }
+
+        enum FontsSize: CGFloat {
+            case size = 50.0
+        }
     }
 
     enum SkillsScreenConstants {
-        enum Common: String {
-            case title = "Skills"
-        }
-
         enum Headline: String {
             case programmingLanguages = "Programming Languages"
-            case technologies = "Technologies"
+            case ides = "IDE"
+            case generalKnowledge = "General Knowledge"
             case graphic = "Graphic Experience"
+
+            var localized: String {
+                return self.rawValue.localizedCapitalized
+            }
         }
 
         enum HeadlinesBody: String {
             case programmingLanguages = " : C, C++, C#, Swift, JS, Python, AutoLISP"
-            case technologies = " : "
+            case technologies = " : Xcode, Visual Studio, Unity, PyCharm"
+            case generalKnowledge = " : SOLID, OOP, Design Patterns, RESTful (JSON/XML) Web Service, IOS SDK, UIKit, Autolayout, GCD, CocoaPods"
             case graphic = " : AutoCad, Maya, 3ds Max, Blender"
         }
 
+        enum Animation: Double {
+            case animationDuration = 2.0
+        }
+
+        enum Fonts: String {
+            case helveticaNeueBold = "HelveticaNeue-Bold"
+        }
+
+        enum FontsSize: CGFloat {
+            case helveticaNeueBold = 16.0
+        }
     }
 
     enum EducationScreenConstants {
-        enum Common: String {
-            case title = "Education"
-        }
-        static let animationDuration = 2.0
-
-        enum educationName: String {
+        enum EducationName: String {
             case school = "School #247"
             case lyceum = "Dniprovsky Technical Lyceum (DTL)"
             case university = "National Technical University of Ukraine \"Igor Sikorsky Kyiv Polytechnic Institute\""
             case other = "Courses, books, articles, etc"
+
+            var localized: String {
+                return self.rawValue.localizedCapitalized
+            }
         }
 
-        enum educationYear: String {
+        enum EducationYear: String {
             case school = "2001 - 2010"
             case lyceum = "2010 - 2012"
             case university = "2012 - 2018"
             case other = "2012 - ..."
         }
+
+        enum Animation: Double {
+            case animationDuration = 2.0
+        }
+
+        enum Fonts: String {
+            case helveticaNeueBold = "HelveticaNeue-Bold"
+        }
+
+        enum FontsSize: CGFloat {
+            case helveticaNeueBold = 16.0
+        }
     }
 
     enum InterestsScreenConstants {
-        enum Common: String {
-            case title = "Interests"
-        }
-
         enum Interests: String {
-            case gym = "Gym"
             case coding = "Coding"
+            case ai = "Artificial Intelligence"
+            case gym = "Gym"
             case football = "Football"
+            case traveling = "Traveling"
+
+            var localized: String {
+                return self.rawValue.localizedCapitalized
+            }
         }
 
         enum InterestsCells: String {
@@ -96,7 +142,16 @@ enum AppConstants {
             case section = 300.0
         }
 
-    }
-    
+        enum Animation: Double {
+            case animationDurationForStarRotating = 3.0
+        }
 
+        enum Fonts: String {
+            case helveticaNeueBold = "HelveticaNeue-Bold"
+        }
+
+        enum FontsSize: CGFloat {
+            case size = 30.0
+        }
+    }
 }

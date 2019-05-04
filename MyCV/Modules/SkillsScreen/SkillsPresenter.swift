@@ -24,7 +24,7 @@ class SkillsPresenter {
     }
 
     func provideTitle() {
-        self.view?.setNavigationTitle(title: AppConstants.SkillsScreenConstants.Common.title.rawValue)
+        self.view?.setNavigationTitle(title: AppConstants.TabBarTitleConstants.skills.localized)
     }
 //
 //    func provideCellsData() {

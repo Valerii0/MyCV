@@ -29,10 +29,10 @@ class NameAndPhotoPresenter {
     }
 
     func provideFirstName() {
-        self.view?.showFirstName(firstName: AppConstants.NameAndPhotoScreenConstants.name.rawValue)
+        self.view?.showFirstName(firstName: AppConstants.NameAndPhotoScreenConstants.Content.name.localized)
     }
 
     func provideSecondName() {
-        self.view?.showSecondName(secondName: AppConstants.NameAndPhotoScreenConstants.surname.rawValue)
+        self.view?.showSecondName(secondName: AppConstants.NameAndPhotoScreenConstants.Content.surname.localized)
     }
 }

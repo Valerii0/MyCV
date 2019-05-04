@@ -43,7 +43,7 @@ class MainCoordinator: Coordinatable {
 
     func nameAndPhotoViewController() -> UIViewController {
         let viewController = NameAndPhotoViewController.instantiate(storyboardName: StoryboardsName.nameAndPhotoTab.rawValue)
-        viewController.tabBarItem = UITabBarItem(title: AppConstants.tabBarTitleConstants.i.rawValue,
+        viewController.tabBarItem = UITabBarItem(title: AppConstants.TabBarTitleConstants.iAm.localized,
                                                  image: UIImage(named: AppConstants.AssetsConstants.tabBarCard.rawValue),
                                                  tag: 0)
         let configurator = NameAndPhotoConfigurator()
@@ -53,7 +53,7 @@ class MainCoordinator: Coordinatable {
 
     func skillsViewController() -> UINavigationController {
         let viewController = SkillsViewController.instantiate(storyboardName: StoryboardsName.skillsTab.rawValue)
-        viewController.tabBarItem = UITabBarItem(title: AppConstants.tabBarTitleConstants.skills.rawValue,
+        viewController.tabBarItem = UITabBarItem(title: AppConstants.TabBarTitleConstants.skills.localized,
                                                  image: UIImage(named: AppConstants.AssetsConstants.tabBarIntellectual.rawValue),
                                                  tag: 1)
         let configurator = SkillsConfigurator()
@@ -65,7 +65,7 @@ class MainCoordinator: Coordinatable {
 
     func educationViewController() -> UINavigationController {
         let viewController = EducationViewController.instantiate(storyboardName: StoryboardsName.educationTab.rawValue)
-        viewController.tabBarItem = UITabBarItem(title: AppConstants.tabBarTitleConstants.education.rawValue,
+        viewController.tabBarItem = UITabBarItem(title: AppConstants.TabBarTitleConstants.education.localized,
                                                  image: UIImage(named: AppConstants.AssetsConstants.tabBarStudent.rawValue),
                                                  tag: 2)
         let configurator = EducationConfigurator()
@@ -77,7 +77,7 @@ class MainCoordinator: Coordinatable {
 
     func interestsViewController() -> UINavigationController {
         let viewController = InterestsViewController.instantiate(storyboardName: StoryboardsName.interestsTab.rawValue)
-        viewController.tabBarItem = UITabBarItem(title: AppConstants.tabBarTitleConstants.interests.rawValue,
+        viewController.tabBarItem = UITabBarItem(title: AppConstants.TabBarTitleConstants.interests.localized,
                                                  image: UIImage(named: AppConstants.AssetsConstants.tabBarStar.rawValue),
                                                  tag: 3)
         let configurator = InterestsConfigurator()

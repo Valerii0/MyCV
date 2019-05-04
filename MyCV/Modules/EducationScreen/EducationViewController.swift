@@ -35,8 +35,8 @@ class EducationViewController: UIViewController, Storyboarded {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        makeAnimationRoad(with: roadView, duration: AppConstants.EducationScreenConstants.animationDuration)
-        makeAnimationLabels(with: arisingLabels, duration: AppConstants.EducationScreenConstants.animationDuration)
+        makeAnimationRoad(with: roadView, duration: AppConstants.EducationScreenConstants.Animation.animationDuration.rawValue)
+        makeAnimationLabels(with: arisingLabels, duration: AppConstants.EducationScreenConstants.Animation.animationDuration.rawValue)
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -70,7 +70,8 @@ class EducationViewController: UIViewController, Storyboarded {
         arisingLabels.flatMap({$0}).forEach { (label) in
             label.textColor = .blue
             label.textAlignment = .center
-            label.font = UIFont(name:"HelveticaNeue-Bold", size: 16.0)
+            label.font = UIFont(name: AppConstants.EducationScreenConstants.Fonts.helveticaNeueBold.rawValue,
+                                size: AppConstants.EducationScreenConstants.FontsSize.helveticaNeueBold.rawValue)
             label.numberOfLines = 0
         }
     }
@@ -83,7 +84,7 @@ class EducationViewController: UIViewController, Storyboarded {
         roadView.layer.sublayers?.removeAll()
     }
 
-    private func makeAnimationLabels(with arisingLabels: [[UILabel]], duration: TimeInterval) {
+    private func makeAnimationLabels(with arisingLabels: [[UILabel]], duration: Double) {
         let singleDuration = duration / Double(arisingLabels.count)
         for arrayIndex in 0..<arisingLabels.count {
             for elementIndex in 0..<arisingLabels[arrayIndex].count {
@@ -92,7 +93,7 @@ class EducationViewController: UIViewController, Storyboarded {
         }
     }
 
-    private func makeAnimationRoad(with roadView: UIView, duration: TimeInterval) {
+    private func makeAnimationRoad(with roadView: UIView, duration: Double) {
         let gradientLAyer = CAGradientLayer()
         gradientLAyer.colors = [UIColor.white.cgColor, UIColor.blue.cgColor]
         gradientLAyer.locations = [0, 1]

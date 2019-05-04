@@ -90,10 +90,10 @@
                         <viewLayoutGuide key="safeArea" id="dHF-Ln-f8C"/>
                     </view>
                     <connections>
-                        <outlet property="bottomLabel" destination="AdW-Uj-ZAD" id="nRI-3a-RTS"/>
                         <outlet property="bottomView" destination="9rd-WR-I23" id="X7y-QK-xdu"/>
                         <outlet property="centerImage" destination="Gi4-N3-6bQ" id="iKM-d2-OVN"/>
-                        <outlet property="topLabel" destination="4VA-Vx-l0i" id="cDk-26-eTV"/>
+                        <outlet property="firstNameLabel" destination="4VA-Vx-l0i" id="vx2-Hw-cbB"/>
+                        <outlet property="secondNameLabel" destination="AdW-Uj-ZAD" id="2W2-ny-Bgt"/>
                         <outlet property="topView" destination="yJL-wy-dsb" id="Hfi-vE-l87"/>
                     </connections>
                 </viewController>

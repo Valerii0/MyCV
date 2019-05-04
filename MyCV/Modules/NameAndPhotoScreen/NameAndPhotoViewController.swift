@@ -15,8 +15,8 @@ class NameAndPhotoViewController: UIViewController, Storyboarded {
 
     @IBOutlet weak var centerImage: UIImageView!
 
-    @IBOutlet weak var topLabel: UILabel!
-    @IBOutlet weak var bottomLabel: UILabel!
+    @IBOutlet weak var firstNameLabel: UILabel!
+    @IBOutlet weak var secondNameLabel: UILabel!
     
     var presenter: NameAndPhotoPresenter!
 
@@ -30,9 +30,15 @@ class NameAndPhotoViewController: UIViewController, Storyboarded {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        setUpImage(with: centerImage)
-        setUpLabel(with: topLabel)
-        setUpLabel(with: bottomLabel)
+        makeAnimationLabel(with: firstNameLabel, duration: AppConstants.NameAndPhotoScreenConstants.Animation.animationDuration.rawValue)
+        makeAnimationLabel(with: secondNameLabel, duration: AppConstants.NameAndPhotoScreenConstants.Animation.animationDuration.rawValue)
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        clearAnimationFromLabel(with: firstNameLabel)
+        clearAnimationFromLabel(with: secondNameLabel)
     }
 
     private func configure() {
@@ -42,24 +48,32 @@ class NameAndPhotoViewController: UIViewController, Storyboarded {
     }
 
     private func setUpUI() {
+        setUpBackgroundsColor()
+        setUpLabel(with: firstNameLabel)
+        setUpLabel(with: secondNameLabel)
+        setUpImage(with: centerImage)
+    }
+
+    private func setUpBackgroundsColor() {
         topView.backgroundColor = .blue
         bottomView.backgroundColor = .blue
     }
 
-    private func setUpImage(with imageView: UIImageView) {
+    private func setUpLabel(with label: UILabel) {
+        label.textColor = .blue
+        label.font = UIFont.systemFont(ofSize: AppConstants.NameAndPhotoScreenConstants.FontsSize.size.rawValue)
+        label.textAlignment = .center
+    }
 
+    private func setUpImage(with imageView: UIImageView) {
+        imageView.layoutIfNeeded()
         imageView.layer.cornerRadius = imageView.frame.width / 2
         imageView.clipsToBounds = true
         imageView.layer.borderColor = UIColor.blue.cgColor
         imageView.layer.borderWidth = imageView.frame.width / 30
     }
 
-    private func setUpLabel(with label: UILabel) {
-
-        label.textColor = .blue
-        label.font = UIFont.systemFont(ofSize: 50)
-        label.textAlignment = .center
-
+    private func makeAnimationLabel(with label: UILabel, duration: Double) {
         let gradientLAyer = CAGradientLayer()
         gradientLAyer.colors = [UIColor.clear.cgColor, UIColor.white.cgColor, UIColor.clear.cgColor]
         gradientLAyer.locations = [0, 0.5, 1]
@@ -69,12 +83,16 @@ class NameAndPhotoViewController: UIViewController, Storyboarded {
         label.layer.mask = gradientLAyer
 
         let animation = CABasicAnimation(keyPath: "transform.translation.x")
-        animation.duration = 3
+        animation.duration = duration
         animation.fromValue = -view.frame.width
         animation.toValue = view.frame.width
         animation.repeatCount = Float.infinity
 
         gradientLAyer.add(animation, forKey: nil)
+    }
+
+    private func clearAnimationFromLabel(with label: UILabel) {
+        label.layer.sublayers?.removeAll()
     }
 }
 
@@ -85,10 +103,10 @@ extension NameAndPhotoViewController: NameAndPhotoView {
     }
 
     func showFirstName(firstName: String) {
-        self.topLabel.text = firstName
+        self.firstNameLabel.text = firstName
     }
 
     func showSecondName(secondName: String) {
-        self.bottomLabel.text = secondName
+        self.secondNameLabel.text = secondName
     }
 }

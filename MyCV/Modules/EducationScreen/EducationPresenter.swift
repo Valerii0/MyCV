@@ -24,15 +24,15 @@ class EducationPresenter {
     }
 
     func provideTitle() {
-        self.view?.setNavigationTitle(title: AppConstants.EducationScreenConstants.Common.title.rawValue)
+        self.view?.setNavigationTitle(title: AppConstants.TabBarTitleConstants.education.localized)
     }
 
     func provideTwoDimensionalArrayForLabels() {
         let twoDimensionalArrayForLabels: [[String]] = [
-            [AppConstants.EducationScreenConstants.educationName.school.rawValue, AppConstants.EducationScreenConstants.educationYear.school.rawValue],
-            [AppConstants.EducationScreenConstants.educationYear.lyceum.rawValue, AppConstants.EducationScreenConstants.educationName.lyceum.rawValue],
-            [AppConstants.EducationScreenConstants.educationName.university.rawValue, AppConstants.EducationScreenConstants.educationYear.university.rawValue],
-            [AppConstants.EducationScreenConstants.educationYear.other.rawValue, AppConstants.EducationScreenConstants.educationName.other.rawValue]
+            [AppConstants.EducationScreenConstants.EducationName.school.localized, AppConstants.EducationScreenConstants.EducationYear.school.rawValue],
+            [AppConstants.EducationScreenConstants.EducationYear.lyceum.rawValue, AppConstants.EducationScreenConstants.EducationName.lyceum.localized],
+            [AppConstants.EducationScreenConstants.EducationName.university.localized, AppConstants.EducationScreenConstants.EducationYear.university.rawValue],
+            [AppConstants.EducationScreenConstants.EducationYear.other.rawValue, AppConstants.EducationScreenConstants.EducationName.other.localized]
         ]
         self.view?.setLabelsData(twoDimensionalArrayForLabels: twoDimensionalArrayForLabels)
     }
