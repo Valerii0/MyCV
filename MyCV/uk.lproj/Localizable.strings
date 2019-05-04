@@ -9,16 +9,20 @@
 "Skills" = "Навички";
 "Education" = "Освіта";
 "Interests" = "Інтереси";
+
 "Valerii" = "Валерій";
 "Petrychenko" = "Петриченко";
+
 "Programming Languages" = "Мови програмування";
 "IDE" = "ІСР";
 "General Knowledge" = "Загальні знання";
 "Graphic Experience" = "Графічний досвід";
+
 "School #247" = "Школа #247";
 "Dniprovsky Technical Lyceum (DTL)" = "Технічний Ліцей (DTL)";
 "National Technical University of Ukraine \"Igor Sikorsky Kyiv Polytechnic Institute\"" = "Національний технічний університет України \"Київський політехнічний інститут імені Ігоря Сікорського\"";
 "Courses, books, articles, etc" = "Курси, книги, статті, і тд..";
+
 "Coding" = "Програмування";
 "Artificial Intelligence" = "Штучний інтелект";
 "Gym" = "Спортзал";

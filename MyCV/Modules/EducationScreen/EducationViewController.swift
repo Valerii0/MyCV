@@ -102,7 +102,7 @@ class EducationViewController: UIViewController, Storyboarded {
         let animation = CABasicAnimation(keyPath: "transform.translation.y")
         animation.duration = duration
         animation.fromValue = -roadView.frame.height
-        animation.toValue = 0.0//roadView.frame.height
+        animation.toValue = 0.0
 
         gradientLAyer.add(animation, forKey: nil)
 

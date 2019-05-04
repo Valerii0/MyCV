@@ -32,7 +32,7 @@ enum AppConstants {
         case interests = "Interests"
 
         var localized: String {
-            return self.rawValue.localizedCapitalized
+            return self.rawValue.localized()
         }
     }
 
@@ -42,7 +42,7 @@ enum AppConstants {
             case surname = "Petrychenko"
 
             var localized: String {
-                return self.rawValue.localizedCapitalized
+                return self.rawValue.localized()
             }
         }
 
@@ -63,7 +63,7 @@ enum AppConstants {
             case graphic = "Graphic Experience"
 
             var localized: String {
-                return self.rawValue.localizedCapitalized
+                return self.rawValue.localized()
             }
         }
 
@@ -95,7 +95,7 @@ enum AppConstants {
             case other = "Courses, books, articles, etc"
 
             var localized: String {
-                return self.rawValue.localizedCapitalized
+                return self.rawValue.localized()
             }
         }
 
@@ -128,7 +128,7 @@ enum AppConstants {
             case traveling = "Traveling"
 
             var localized: String {
-                return self.rawValue.localizedCapitalized
+                return self.rawValue.localized()
             }
         }
 
@@ -151,7 +151,7 @@ enum AppConstants {
         }
 
         enum FontsSize: CGFloat {
-            case size = 30.0
+            case size = 25.0
         }
     }
 }
