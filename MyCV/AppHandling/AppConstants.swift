@@ -17,6 +17,7 @@ enum AppConstants {
         case tabBarStudent = "TabBar/student"
         case tabBarStar = "TabBar/star"
         case myPhoto = "NameAndPhoto/myPhoto"
+        case wheel = "Skills/wheel"
         case interestsCellStar = "Interests/cellStar"
         case interestsMac = "Interests/mac"
         case interestsAI = "Interests/ai"
@@ -37,9 +38,9 @@ enum AppConstants {
     }
 
     enum NameAndPhotoScreenConstants {
-        enum Content: String {
-            case name = "Valerii"
-            case surname = "Petrychenko"
+        enum Owner: String {
+            case firstName = "Valerii"
+            case secondName = "Petrychenko"
 
             var localized: String {
                 return self.rawValue.localized()
@@ -68,14 +69,14 @@ enum AppConstants {
         }
 
         enum HeadlinesBody: String {
-            case programmingLanguages = " : C, C++, C#, Swift, JS, Python, AutoLISP"
-            case technologies = " : Xcode, Visual Studio, Unity, PyCharm"
-            case generalKnowledge = " : SOLID, OOP, Design Patterns, RESTful (JSON/XML) Web Service, IOS SDK, UIKit, Autolayout, GCD, CocoaPods"
-            case graphic = " : AutoCad, Maya, 3ds Max, Blender"
+            case programmingLanguages = "C, C++, C#, Swift, JS, Python, AutoLISP"
+            case ides = "Xcode, Visual Studio, Unity, PyCharm"
+            case generalKnowledge = "SOLID, OOP, Design Patterns, RESTful (JSON/XML) Web Service, IOS SDK, UIKit, Autolayout, GCD, CocoaPods"
+            case graphic = "AutoCad, Maya, 3ds Max, Blender"
         }
 
         enum Animation: Double {
-            case animationDuration = 2.0
+            case animationDuration = 4.0
         }
 
         enum Fonts: String {

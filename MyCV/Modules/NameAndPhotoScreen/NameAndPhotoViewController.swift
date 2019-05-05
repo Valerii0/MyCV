@@ -43,8 +43,7 @@ class NameAndPhotoViewController: UIViewController, Storyboarded {
 
     private func configure() {
         presenter.provideImageUrl()
-        presenter.provideFirstName()
-        presenter.provideSecondName()
+        presenter.provideFullName()
     }
 
     private func setUpUI() {
@@ -102,11 +101,8 @@ extension NameAndPhotoViewController: NameAndPhotoView {
         self.centerImage.contentMode = .scaleAspectFill
     }
 
-    func showFirstName(firstName: String) {
-        self.firstNameLabel.text = firstName
-    }
-
-    func showSecondName(secondName: String) {
-        self.secondNameLabel.text = secondName
+    func showFullName(owner: Owner) {
+        self.firstNameLabel.text = owner.firstName
+        self.secondNameLabel.text = owner.secondName
     }
 }

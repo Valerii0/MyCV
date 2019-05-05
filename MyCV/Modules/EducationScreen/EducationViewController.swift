@@ -42,8 +42,8 @@ class EducationViewController: UIViewController, Storyboarded {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
 
-        setAllLabelsAlphaZero()
-        clearAnimationRoad()
+        setAllLabelsAlphaZero(with: arisingLabels)
+        clearAnimationRoad(with: roadView)
     }
 
     private func configure() {
@@ -53,8 +53,8 @@ class EducationViewController: UIViewController, Storyboarded {
 
     private func setUpUI() {
         makeLabelsArray()
-        setUpLabels()
-        setAllLabelsAlphaZero()
+        setUpLabels(with: arisingLabels)
+        setAllLabelsAlphaZero(with: arisingLabels)
     }
 
     private func makeLabelsArray() {
@@ -66,8 +66,8 @@ class EducationViewController: UIViewController, Storyboarded {
         ]
     }
 
-    private func setUpLabels() {
-        arisingLabels.flatMap({$0}).forEach { (label) in
+    private func setUpLabels(with labels: [[UILabel]]) {
+        labels.flatMap({$0}).forEach { (label) in
             label.textColor = .blue
             label.textAlignment = .center
             label.font = UIFont(name: AppConstants.EducationScreenConstants.Fonts.helveticaNeueBold.rawValue,
@@ -76,11 +76,11 @@ class EducationViewController: UIViewController, Storyboarded {
         }
     }
 
-    private func setAllLabelsAlphaZero() {
-        arisingLabels.flatMap({$0}).forEach({$0.alpha = 0})
+    private func setAllLabelsAlphaZero(with labels: [[UILabel]]) {
+        labels.flatMap({$0}).forEach({$0.alpha = 0})
     }
 
-    private func clearAnimationRoad() {
+    private func clearAnimationRoad(with roadView: UIView) {
         roadView.layer.sublayers?.removeAll()
     }
 
@@ -116,9 +116,11 @@ extension EducationViewController: EducationView {
     }
     
     func setLabelsData(twoDimensionalArrayForLabels: [[String]]) {
-        for arrayIndex in 0..<arisingLabels.count {
-            for elementIndex in 0..<arisingLabels[arrayIndex].count {
-                arisingLabels[arrayIndex][elementIndex].text = twoDimensionalArrayForLabels[arrayIndex][elementIndex]
+        if arisingLabels.count == twoDimensionalArrayForLabels.count {
+            for arrayIndex in 0..<arisingLabels.count {
+                for elementIndex in 0..<arisingLabels[arrayIndex].count {
+                    arisingLabels[arrayIndex][elementIndex].text = twoDimensionalArrayForLabels[arrayIndex][elementIndex]
+                }
             }
         }
     }

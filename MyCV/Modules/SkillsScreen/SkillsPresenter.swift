@@ -10,7 +10,8 @@ import Foundation
 
 protocol SkillsView: class {
     func setNavigationTitle(title: String)
-    //func setCellsArray(cellsDataArray: [CellsModel])
+    func showImage(imageUrl: String)
+    func setLabelsData(twoDimensionalArrayForLabels: [[String]])
 }
 
 class SkillsPresenter {
@@ -26,18 +27,18 @@ class SkillsPresenter {
     func provideTitle() {
         self.view?.setNavigationTitle(title: AppConstants.TabBarTitleConstants.skills.localized)
     }
-//
-//    func provideCellsData() {
-//        let cellsDataArray: [CellsModel] = [CellsModel(opened: false,
-//                                                       title: AppConstants.InterestsScreenConstants.Interests.gym.rawValue,
-//                                                       sectionData: AppConstants.AssetsConstants.interestsGym.rawValue),
-//                                            CellsModel(opened: false,
-//                                                       title: AppConstants.InterestsScreenConstants.Interests.coding.rawValue,
-//                                                       sectionData: AppConstants.AssetsConstants.interestsMac.rawValue),
-//                                            CellsModel(opened: false,
-//                                                       title: AppConstants.InterestsScreenConstants.Interests.football.rawValue,
-//                                                       sectionData: AppConstants.AssetsConstants.interestsStadium.rawValue)]
-//
-//        self.view?.setCellsArray(cellsDataArray: cellsDataArray)
-//    }
+
+    func provideImageUrl() {
+        self.view?.showImage(imageUrl: AppConstants.AssetsConstants.wheel.rawValue)
+    }
+
+    func provideTwoDimensionalArrayForLabels() {
+        let twoDimensionalArrayForLabels: [[String]] = [
+            [AppConstants.SkillsScreenConstants.Headline.programmingLanguages.localized, AppConstants.SkillsScreenConstants.HeadlinesBody.programmingLanguages.rawValue],
+            [AppConstants.SkillsScreenConstants.Headline.ides.localized, AppConstants.SkillsScreenConstants.HeadlinesBody.ides.rawValue],
+            [AppConstants.SkillsScreenConstants.Headline.generalKnowledge.localized, AppConstants.SkillsScreenConstants.HeadlinesBody.generalKnowledge.rawValue],
+            [AppConstants.SkillsScreenConstants.Headline.graphic.localized, AppConstants.SkillsScreenConstants.HeadlinesBody.graphic.rawValue]
+        ]
+        self.view?.setLabelsData(twoDimensionalArrayForLabels: twoDimensionalArrayForLabels)
+    }
 }

@@ -10,8 +10,7 @@ import Foundation
 
 protocol NameAndPhotoView: class {
     func showImage(imageUrl: String)
-    func showFirstName(firstName: String)
-    func showSecondName(secondName: String)
+    func showFullName(owner: Owner)
 }
 
 class NameAndPhotoPresenter {
@@ -28,11 +27,10 @@ class NameAndPhotoPresenter {
         self.view?.showImage(imageUrl: AppConstants.AssetsConstants.myPhoto.rawValue)
     }
 
-    func provideFirstName() {
-        self.view?.showFirstName(firstName: AppConstants.NameAndPhotoScreenConstants.Content.name.localized)
-    }
+    func provideFullName() {
+        let owner = Owner(firstName: AppConstants.NameAndPhotoScreenConstants.Owner.firstName.localized,
+                          secondName: AppConstants.NameAndPhotoScreenConstants.Owner.secondName.localized)
 
-    func provideSecondName() {
-        self.view?.showSecondName(secondName: AppConstants.NameAndPhotoScreenConstants.Content.surname.localized)
+        self.view?.showFullName(owner: owner)
     }
 }

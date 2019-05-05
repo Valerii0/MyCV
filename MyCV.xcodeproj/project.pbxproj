@@ -12,7 +12,6 @@
 		380037922274C6D800B9687E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380037912274C6D800B9687E /* Assets.xcassets */; };
 		380037952274C6D800B9687E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380037932274C6D800B9687E /* LaunchScreen.storyboard */; };
 		381143A1227DAB0F0084964C /* extensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381143A0227DAB0F0084964C /* extensionString.swift */; };
-		381143A3227DB32D0084964C /* extensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381143A2227DB32D0084964C /* extensionUIViewController.swift */; };
 		381AE370227A5820009A6A8B /* InterestsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381AE36E227A5820009A6A8B /* InterestsHeaderTableViewCell.swift */; };
 		381AE371227A5820009A6A8B /* InterestsHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 381AE36F227A5820009A6A8B /* InterestsHeaderTableViewCell.xib */; };
 		381AE374227A5830009A6A8B /* InterestsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381AE372227A5830009A6A8B /* InterestsTableViewCell.swift */; };
@@ -27,6 +26,7 @@
 		383681AB227B7A0A00F722DB /* EducationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383681AA227B7A0A00F722DB /* EducationPresenter.swift */; };
 		383681AD227B9D8800F722DB /* extensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383681AC227B9D8800F722DB /* extensionUIView.swift */; };
 		3852B33B227CCB06006B3BBA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3852B33D227CCB06006B3BBA /* Localizable.strings */; };
+		38A3877E227F1B1D00B7C19B /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A3877D227F1B1D00B7C19B /* Owner.swift */; };
 		38A84740227A0571005BA84E /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A8473F227A0571005BA84E /* SkillsViewController.swift */; };
 		38A84742227A05BE005BA84E /* Skills.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A84741227A05BE005BA84E /* Skills.storyboard */; };
 		38A84745227A3370005BA84E /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A84744227A3370005BA84E /* InterestsViewController.swift */; };
@@ -36,6 +36,7 @@
 		38A863A42276400500906237 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A863A32276400500906237 /* MainCoordinator.swift */; };
 		38A863A62276401300906237 /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A863A52276401300906237 /* Configurator.swift */; };
 		38A863A82276403B00906237 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A863A72276403B00906237 /* Storyboarded.swift */; };
+		38AA7B88227F72DA00BC1570 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AA7B87227F72DA00BC1570 /* Star.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +47,6 @@
 		380037942274C6D800B9687E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		380037962274C6D800B9687E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		381143A0227DAB0F0084964C /* extensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionString.swift; sourceTree = "<group>"; };
-		381143A2227DB32D0084964C /* extensionUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionUIViewController.swift; sourceTree = "<group>"; };
 		381AE36E227A5820009A6A8B /* InterestsHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		381AE36F227A5820009A6A8B /* InterestsHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterestsHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		381AE372227A5830009A6A8B /* InterestsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsTableViewCell.swift; sourceTree = "<group>"; };
@@ -63,6 +63,7 @@
 		3852B33C227CCB06006B3BBA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3852B33E227CCB1C006B3BBA /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3852B33F227CCB29006B3BBA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		38A3877D227F1B1D00B7C19B /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		38A8473F227A0571005BA84E /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
 		38A84741227A05BE005BA84E /* Skills.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Skills.storyboard; sourceTree = "<group>"; };
 		38A84744227A3370005BA84E /* InterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 		38A863A32276400500906237 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		38A863A52276401300906237 /* Configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
 		38A863A72276403B00906237 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		38AA7B87227F72DA00BC1570 /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				3832D51922773F280034D2A0 /* NameAndPhotoViewController.swift */,
 				3832D51722773F0C0034D2A0 /* NameAndPhotoPresenter.swift */,
 				3800378E2274C6C200B9687E /* NameAndPhoto.storyboard */,
+				38A38780227F1BBD00B7C19B /* Model */,
 			);
 			path = NameAndPhotoScreen;
 			sourceTree = "<group>";
@@ -183,12 +186,29 @@
 			path = EducationScreen;
 			sourceTree = "<group>";
 		};
+		38A38780227F1BBD00B7C19B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38A3877D227F1B1D00B7C19B /* Owner.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		38A38781227F1EC100B7C19B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38AA7B87227F72DA00BC1570 /* Star.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		38A8473E227A0458005BA84E /* SkillsScreen */ = {
 			isa = PBXGroup;
 			children = (
 				38A8473F227A0571005BA84E /* SkillsViewController.swift */,
 				383681A3227B738D00F722DB /* SkillsPresenter.swift */,
 				38A84741227A05BE005BA84E /* Skills.storyboard */,
+				38A38781227F1EC100B7C19B /* Model */,
 			);
 			path = SkillsScreen;
 			sourceTree = "<group>";
@@ -208,7 +228,6 @@
 		38A8474A227A4884005BA84E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				381143A2227DB32D0084964C /* extensionUIViewController.swift */,
 				38A8474B227A48BA005BA84E /* extensionUITableView.swift */,
 				383681AC227B9D8800F722DB /* extensionUIView.swift */,
 				381143A0227DAB0F0084964C /* extensionString.swift */,
@@ -309,7 +328,6 @@
 				383681AB227B7A0A00F722DB /* EducationPresenter.swift in Sources */,
 				38A863A62276401300906237 /* Configurator.swift in Sources */,
 				3832D51A22773F280034D2A0 /* NameAndPhotoViewController.swift in Sources */,
-				381143A3227DB32D0084964C /* extensionUIViewController.swift in Sources */,
 				38A84749227A3E8E005BA84E /* InterestsPresenter.swift in Sources */,
 				383681A9227B797D00F722DB /* EducationViewController.swift in Sources */,
 				3832D51322773AD50034D2A0 /* AppConstants.swift in Sources */,
@@ -319,8 +337,10 @@
 				383681A4227B738D00F722DB /* SkillsPresenter.swift in Sources */,
 				3832D51822773F0C0034D2A0 /* NameAndPhotoPresenter.swift in Sources */,
 				38A863A42276400500906237 /* MainCoordinator.swift in Sources */,
+				38AA7B88227F72DA00BC1570 /* Star.swift in Sources */,
 				381AE374227A5830009A6A8B /* InterestsTableViewCell.swift in Sources */,
 				38A84740227A0571005BA84E /* SkillsViewController.swift in Sources */,
+				38A3877E227F1B1D00B7C19B /* Owner.swift in Sources */,
 				381143A1227DAB0F0084964C /* extensionString.swift in Sources */,
 				381AE370227A5820009A6A8B /* InterestsHeaderTableViewCell.swift in Sources */,
 				3800378B2274C6C200B9687E /* AppDelegate.swift in Sources */,
