@@ -1,5 +1,5 @@
 # MyCV
-MyCV app for MacPaw
+MyCV app.
 
 ## Getting Started
 Just download and check it!
